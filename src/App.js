@@ -1,4 +1,5 @@
 import React from "react";
+import Currencies from "./Currencies";
 
 function App() {
   return (
@@ -6,7 +7,7 @@ function App() {
       <form className="form">
         <fieldset className="converter">
           <legend className="converter__name">Currency converter</legend>
-          <p>
+          <section>
             <label className="converter__amount">
               <span className="converter__label">
                 How much <strong>PLN</strong> do You want to exchange?
@@ -21,21 +22,15 @@ function App() {
                 required
               />
             </label>
-          </p>
-          <p>
+          </section>
+          <section>
             <label className="converter__currency">
               <span className="converter__label">
                 Choose the currency You want:
               </span>
-              <select name="currencyList" className="converter__currencyList">
-                <option value="eur">EUR</option>
-                <option value="usd">USD</option>
-                <option value="nok">NOK</option>
-                <option value="rub">RUB</option>
-                <option value="gbp">GBP</option>
-              </select>
+              <Currencies />
             </label>
-          </p>
+          </section>
           <button className="converter__convertBtn">Let's see...</button>
           <p className="converter__result"></p>
         </fieldset>
