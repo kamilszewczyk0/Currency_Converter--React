@@ -7,10 +7,11 @@ import Button from "./Button";
 import Result from "./Result";
 import Form from "./Form";
 import Footer from "./Footer";
+import Container from "./Container";
 
 function App() {
   return (
-    <section className="container">
+    <Container>
       <Form>
         <Legend />
         <Section
@@ -29,7 +30,7 @@ function App() {
         <Result />
       </Form>
       <Footer />
-    </section>
+    </Container>
   );
 }
 
