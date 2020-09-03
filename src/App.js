@@ -8,7 +8,7 @@ function App() {
     <section className="container">
       <form className="form">
         <fieldset className="converter">
-          <legend className="converter__name">Currency converter</legend>
+          <legend className="converter__name">Currency converter v2</legend>
           <Section
             title={[
               `How much `,
