@@ -1,0 +1,7 @@
+.converter__name {
+  font-family: "Anton", sans-serif;
+  letter-spacing: 1px;
+  padding: 10px;
+  border: 2px #fec300 solid;
+  z-index: 1;
+}

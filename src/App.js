@@ -2,13 +2,15 @@ import React from "react";
 import Currencies from "./Currencies";
 import Input from "./Input";
 import Section from "./Section";
+import Legend from "./Legend";
+import Button from "./Button";
 
 function App() {
   return (
     <section className="container">
       <form className="form">
         <fieldset className="converter">
-          <legend className="converter__name">Currency converter v2</legend>
+          <Legend />
           <Section
             title={[
               `How much `,
@@ -21,12 +23,12 @@ function App() {
             title={"Choose the currency You want:"}
             body={<Currencies />}
           />
-          <button className="converter__convertBtn">Let's see...</button>
+          <Button />
           <p className="converter__result"></p>
         </fieldset>
       </form>
       <footer className="footer">
-        <section className="footer__statement">
+        <section>
           Currency exchange courses based on
           <a
             className="footer__link"
