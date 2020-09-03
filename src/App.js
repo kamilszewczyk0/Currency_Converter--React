@@ -2,18 +2,18 @@ import React from "react";
 
 function App() {
   return (
-    <section class="container">
-      <form class="form js-form">
-        <fieldset class="converter">
-          <legend class="converter__name">Currency converter</legend>
+    <section className="container">
+      <form className="form">
+        <fieldset className="converter">
+          <legend className="converter__name">Currency converter</legend>
           <p>
-            <label class="converter__amount">
-              <span class="converter__label">
+            <label className="converter__amount">
+              <span className="converter__label">
                 How much <strong>PLN</strong> do You want to exchange?
               </span>
               <input
                 name="amount"
-                class="converter__amountValue js-value"
+                className="converter__amountValue "
                 type="number"
                 min="1"
                 step="1"
@@ -23,13 +23,11 @@ function App() {
             </label>
           </p>
           <p>
-            <label class="converter__currency">
-              <span class="converter__label">
+            <label className="converter__currency">
+              <span className="converter__label">
                 Choose the currency You want:
               </span>
-              <select
-                name="currencyList"
-                class="converter__currencyList js-currencyList">
+              <select name="currencyList" className="converter__currencyList">
                 <option value="eur">EUR</option>
                 <option value="usd">USD</option>
                 <option value="nok">NOK</option>
@@ -38,22 +36,22 @@ function App() {
               </select>
             </label>
           </p>
-          <button class="converter__convertBtn">Let's see...</button>
-          <p class="converter__result js-result"></p>
+          <button className="converter__convertBtn">Let's see...</button>
+          <p className="converter__result"></p>
         </fieldset>
       </form>
-      <footer class="footer">
-        <p class="footer__statement">
-          Currency exchange courses based on{" "}
+      <footer className="footer">
+        <p className="footer__statement">
+          Currency exchange courses based on
           <a
-            class="footer__link"
+            className="footer__link"
             href="https://kursy-walut.mybank.pl/"
             target="_blanc">
             kursy-walut.mybank.pl
-          </a>{" "}
+          </a>
           from day 4.07.2020
         </p>
-        <p class="footer__credits">© Kamil Szewczyk 2020</p>
+        <p className="footer__credits">© Kamil Szewczyk 2020</p>
       </footer>
     </section>
   );
