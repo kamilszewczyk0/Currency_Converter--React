@@ -1,6 +1,7 @@
 import React from "react";
 import Currencies from "./Currencies";
 import Input from "./Input";
+import Section from "./Section";
 
 function App() {
   return (
@@ -8,28 +9,24 @@ function App() {
       <form className="form">
         <fieldset className="converter">
           <legend className="converter__name">Currency converter</legend>
-          <section>
-            <label className="converter__amount">
-              <span className="converter__label">
-                How much <strong>PLN</strong> do You want to exchange?
-              </span>
-              <Input />
-            </label>
-          </section>
-          <section>
-            <label className="converter__currency">
-              <span className="converter__label">
-                Choose the currency You want:
-              </span>
-              <Currencies />
-            </label>
-          </section>
+          <Section
+            title={[
+              `How much `,
+              <strong>PLN</strong>,
+              ` do You want to exchange?`,
+            ]}
+            body={<Input />}
+          />
+          <Section
+            title={"Choose the currency You want:"}
+            body={<Currencies />}
+          />
           <button className="converter__convertBtn">Let's see...</button>
           <p className="converter__result"></p>
         </fieldset>
       </form>
       <footer className="footer">
-        <p className="footer__statement">
+        <section className="footer__statement">
           Currency exchange courses based on
           <a
             className="footer__link"
@@ -38,7 +35,7 @@ function App() {
             kursy-walut.mybank.pl
           </a>
           from day 4.07.2020
-        </p>
+        </section>
         <p className="footer__credits">© Kamil Szewczyk 2020</p>
       </footer>
     </section>
