@@ -1,5 +1,6 @@
 import React from "react";
 import Currencies from "./Currencies";
+import Input from "./Input";
 
 function App() {
   return (
@@ -12,15 +13,7 @@ function App() {
               <span className="converter__label">
                 How much <strong>PLN</strong> do You want to exchange?
               </span>
-              <input
-                name="amount"
-                className="converter__amountValue "
-                type="number"
-                min="1"
-                step="1"
-                placeholder="Enter the amount"
-                required
-              />
+              <Input />
             </label>
           </section>
           <section>
