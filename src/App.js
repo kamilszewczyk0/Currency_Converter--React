@@ -19,7 +19,7 @@ function App() {
 
   return (
     <Container>
-      <Form />
+      <Form result={result} calculateFinalAmount={calculateFinalAmount} />
       <Footer />
     </Container>
   );
