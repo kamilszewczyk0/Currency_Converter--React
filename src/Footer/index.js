@@ -12,7 +12,7 @@ const Footer = () => {
           target="_blanc">
           kursy-walut.mybank.pl
         </a>
-        &thinsp;from day 4.07.2020
+        &thinsp;from day 4.09.2020
       </p>
       <p>© Kamil Szewczyk 2020</p>
     </footer>

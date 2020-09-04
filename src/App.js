@@ -1,34 +1,25 @@
-import React from "react";
-import Currencies from "./Currencies";
-import Input from "./Input";
-import Section from "./Section";
-import Legend from "./Legend";
-import Button from "./Button";
-import Result from "./Result";
+import React, {useState} from "react";
 import Form from "./Form";
 import Footer from "./Footer";
 import Container from "./Container";
+import {currencies} from "./currencies";
 
 function App() {
+  const [result, setResult] = useState();
+
+  const calculateFinalAmount = (currency, amount) => {
+    const rate = currencies.find(({shorthand}) => shorthand === currency).value;
+
+    setResult({
+      sourceAmount: +amount,
+      targetAmount: amount / rate,
+      currency,
+    });
+  };
+
   return (
     <Container>
-      <Form>
-        <Legend />
-        <Section
-          title={[
-            `How much `,
-            <strong>PLN</strong>,
-            ` do You want to exchange?`,
-          ]}
-          body={<Input />}
-        />
-        <Section
-          title={"Choose the currency You want:"}
-          body={<Currencies />}
-        />
-        <Button />
-        <Result />
-      </Form>
+      <Form />
       <Footer />
     </Container>
   );
