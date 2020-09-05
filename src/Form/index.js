@@ -6,7 +6,7 @@ import "./style.css";
 const Form = ({result, calculateFinalAmount}) => {
   const [currency, setCurrency] = useState(currencies[0].shorthand);
 
-  const [amount, setAmount] = useState("10");
+  const [amount, setAmount] = useState("");
 
   const onSubmit = (event) => {
     event.preventDefault();
