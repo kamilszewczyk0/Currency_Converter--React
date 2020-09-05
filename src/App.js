@@ -11,7 +11,6 @@ function App() {
     const rate = currencies.find(({shorthand}) => shorthand === currency).value;
 
     setResult({
-      sourceAmount: +amount,
       targetAmount: amount / rate,
       currency,
     });
