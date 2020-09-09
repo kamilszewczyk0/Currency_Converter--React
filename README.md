@@ -4,6 +4,8 @@
 
 Project as a homework from YouCode Web developer from Basics Course. Designed and developed by me. Transferred from basic HTML, CSS and JS files into React components, and maked live. All functionality added by using useState hook. Future development will be described right below.
 
+Added new Clock component, with using new Data and training with useEffect hook. Added clock and calendar that updates every second.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
