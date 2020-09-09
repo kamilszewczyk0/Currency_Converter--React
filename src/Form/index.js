@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import Result from "./Result";
 import {currencies} from "../currencies";
 import "./style.css";
+import Clock from "../Clock";
 
 const Form = ({result, calculateFinalAmount}) => {
   const [currency, setCurrency] = useState(currencies[0].shorthand);
@@ -17,6 +18,7 @@ const Form = ({result, calculateFinalAmount}) => {
     <form className="form" onSubmit={onSubmit}>
       <fieldset className="converter">
         <legend className="converter__name">Currency converter v2</legend>
+        <Clock />
         <section className="section">
           <label className="converter__amount">
             <span className="converter__label">
