@@ -1,21 +1,18 @@
 import React from "react";
-import "./style.css";
+import {StyledFooter, Link} from "./styled";
 
 const Footer = () => {
   return (
-    <footer className="footer">
+    <StyledFooter>
       <p>
         Currency exchange courses based on&thinsp;
-        <a
-          className="footer__link"
-          href="https://kursy-walut.mybank.pl/"
-          target="_blanc">
+        <Link href="https://kursy-walut.mybank.pl/" target="_blanc">
           kursy-walut.mybank.pl
-        </a>
+        </Link>
         &thinsp;from day 4.09.2020
       </p>
       <p>© Kamil Szewczyk 2020</p>
-    </footer>
+    </StyledFooter>
   );
 };
 

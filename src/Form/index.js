@@ -1,7 +1,15 @@
 import React, {useState} from "react";
 import Result from "./Result";
 import {currencies} from "../currencies";
-import "./style.css";
+import {
+  StyledForm,
+  Fieldset,
+  Legend,
+  Button,
+  Title,
+  Label,
+  Wrapper,
+} from "./styled";
 import Clock from "../Clock";
 
 const Form = ({result, calculateFinalAmount}) => {
@@ -15,15 +23,15 @@ const Form = ({result, calculateFinalAmount}) => {
   };
 
   return (
-    <form className="form" onSubmit={onSubmit}>
-      <fieldset className="converter">
-        <legend className="converter__name">Currency converter v2</legend>
+    <StyledForm onSubmit={onSubmit}>
+      <Fieldset>
+        <Legend>Currency converter v2</Legend>
         <Clock />
-        <section className="section">
-          <label className="converter__amount">
-            <span className="converter__label">
+        <Wrapper>
+          <Label>
+            <Title>
               How much <strong>PLN</strong> do You want to exchange?
-            </span>
+            </Title>
             <input
               value={amount}
               onChange={({target}) => setAmount(target.value)}
@@ -35,17 +43,14 @@ const Form = ({result, calculateFinalAmount}) => {
               placeholder="Enter the amount"
               required
             />
-          </label>
-        </section>
-        <section className="section">
-          <label className="converter__currency">
-            <span className="converter__label">
-              Choose the currency You want:
-            </span>
+          </Label>
+        </Wrapper>
+        <Wrapper className="section">
+          <Label className="converter__currency">
+            <Title>Choose the currency You want:</Title>
             <select
               value={currency}
               name="currencyList"
-              className="converter__currencyList"
               onChange={({target}) => setCurrency(target.value)}>
               {currencies.map((currency) => (
                 <option key={currency.shorthand} value={currency.shorthand}>
@@ -53,12 +58,12 @@ const Form = ({result, calculateFinalAmount}) => {
                 </option>
               ))}
             </select>
-          </label>
-        </section>
-        <button className="converter__btn">Let's see...</button>
+          </Label>
+        </Wrapper>
+        <Button>Let's see...</Button>
         <Result result={result} />
-      </fieldset>
-    </form>
+      </Fieldset>
+    </StyledForm>
   );
 };
 

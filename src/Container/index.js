@@ -1,8 +1,8 @@
 import React from "react";
-import "./style.css";
+import {Main} from "./styled";
 
 const Container = ({children}) => {
-  return <section className="container">{children}</section>;
+  return <Main className="container">{children}</Main>;
 };
 
 export default Container;

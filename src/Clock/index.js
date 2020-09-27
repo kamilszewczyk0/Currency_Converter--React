@@ -1,5 +1,5 @@
 import React from "react";
-import "./style.css";
+import {Display} from "./styled";
 import {useCurrentDate} from "./useCurrentDate";
 
 const dateFormat = (date) =>
@@ -16,7 +16,7 @@ const dateFormat = (date) =>
 const Clock = () => {
   const date = useCurrentDate();
 
-  return <p className="clock">Today is {dateFormat(date)}</p>;
+  return <Display>Today is {dateFormat(date)}</Display>;
 };
 
 export default Clock;
