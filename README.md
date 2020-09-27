@@ -6,6 +6,10 @@ Project as a homework from YouCode Web developer from Basics Course. Designed an
 
 Added new Clock component, with using new Data and training with useEffect hook. Added clock and calendar that updates every second.
 
+Added Styled Components to controll the styles by JS files. 
+
+Created Custom Hook useCurrentDate.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
