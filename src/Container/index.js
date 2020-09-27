@@ -2,7 +2,7 @@ import React from "react";
 import {Main} from "./styled";
 
 const Container = ({children}) => {
-  return <Main className="container">{children}</Main>;
+  return <Main>{children}</Main>;
 };
 
 export default Container;
