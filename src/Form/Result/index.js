@@ -16,4 +16,4 @@ const Result = ({result}) => {
   );
 };
 
-export default StyledResult;
+export default Result;
